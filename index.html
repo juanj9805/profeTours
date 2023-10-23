@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" href="style2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    
+    <nav class="sidebar close">
+        
+        <header class="header__bt">
+            <div class="logo__container">
+            
+            <img src="/img/logo.svg" alt="" class="logo__bt" id="logo__bt">
+            <div class="text logo">
+                <span class="name " >Aprende a viajar</span>                
+            </div>
+        </div>
+            
+            <i class="bx bx-menu toggle "  id="menuHamburguesa"></i>
+            
+            
+        </header>
+        
+        
+        <div class="menu-bar">
+
+            <div class=" .manu__bt">
+                
+                <li class="search-box" >
+                    <i class='bx bxs-user icon' ></i>
+                    <input type="text" placeholder="Usuarios" >
+                </li>
+                
+                
+                <ul class="menu-links" >
+                    
+                    
+                    
+                    <li class="nav-link" >
+                        <a href="#">
+                            <i class='bx bx-user icon' ></i>
+                            <span class="text nav-text" >Clientes</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-link" >
+                        <a href="#">
+                            <i class="bx bx-trip icon" ></i>
+                            <span class="text nav-text" >Paquetes</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="nav-link" >
+                        <a href="#">
+                            <i class='bx bxs-report icon'></i>
+                            <span class="text nav-text" >Reportes</span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                </ul>
+                
+                
+            </div>
+            
+            
+            <div class="bottom-content">
+                
+                <li>
+                    <a href="#">
+                        <i class="bx bx-log-out icon" ></i>
+                        <span class="text nav-text" >Salir</span>
+                    </a>
+                </li>
+                
+                <li class="mode">
+                    <div class="sun-moon">
+                        
+                        <i class="bx bx-moon icon moon" ></i>
+                        <i class="bx bx-sun icon sun" ></i>
+                        
+                    </div>
+                    <span class="mode-text text" >Modo Oscuro</span>
+                    <div class="toggle-switch">
+                        <span class="switch" ></span>
+                    </div>
+                </li>
+                
+            </div>
+            
+        </div>
+        
+    </nav>
+    
+    <section class="parte__derecha " id="parteDerecha">
+        <div  class="text img__header" >
+            <img src="./img/headerpt.svg" alt="">
+            <h1>Hola Victor</h1>
+            <p>Nos encanta verte nuevamente</p>
+        </div>
+
+        <div class="contenedor__formulario">
+
+            <form class="formulario__bt">
+
+            </form>
+
+            
+
+
+        </div>
+
+        <div class="contenedor__formulario">
+
+            <form class="formulario__bt">
+
+                <div id="messages" class="alert alert-success text-center" style="font-size: 20px;display:none;">
+
+                </div>
+
+            
+                <div class="row justify-content-center">
+                    <div id="alumno-details" class="text-center mt-5 p-2 col-md-4">
+            
+                    </div>
+                </div>
+                
+                <div class="container conteiner__bootcamp">
+                    <div class="row">
+                        <div class="col-8- mt-5">
+            
+                            <table class="table_bh table table-bordered table-hover text-center" >
+            
+                                <thead>
+                                    <tr>
+                                        <th>ID_usuario</th>
+                                        <th>Nombre</th>
+                                        <th>Correo</th>
+                                        <th>Contraseña</th>
+                                        <th>ID_rol</th>
+                                        <th>Estado</th>
+                                    </tr>
+                                </thead>
+            
+                                <tbody id="tbody" ></tbody>
+            
+                            </table>
+            
+            
+                        </div>
+            
+                        <div class="col-4 ml-auto " style="margin-top: 50px;" >
+            
+                            <form class="ml-5">
+            
+                                <div class="form-group">
+            
+                                    <input data-tipo="nombre" type="text" class=" prueba form-control font-italic" id="nombre" placeholder="Nombre" required >
+            
+                                </div>
+            
+            
+            
+                                
+                                <div class="form-group">
+            
+                                    <input data-tipo="descripcion" type="text" class="prueba form-control font-italic" id="descripcion" placeholder="Descripcion" required >
+            
+                                </div>
+            
+                                      
+                                <div class="form-group">
+            
+                                    <input data-tipo="fecha_entrada" type="date" class="prueba form-control font-italic" id="fecha_entrada" placeholder="Fecha entrada" required >
+            
+                                </div>
+            
+                                <div class="form-group">
+            
+                                    <input data-tipo="motivo_devolucion" type="text" class="prueba form-control font-italic" id="motivo_devolucion" placeholder="Descripcion" required >
+            
+                                </div>
+            
+            
+                                <div class="form-group">
+            
+                                    <input data-tipo="volumen" type="text" class="prueba form-control font-italic" id="volumen" placeholder="volumen" required >
+            
+                                </div>
+            
+    
+            
+            
+                                <input type="hidden" id="id">
+            
+            
+                                <button id="agregar" class="btn btn-success btn-block"  type="button">Agregar</button>
+                                <button id="editar" class="btn btn-success btn-block" style="display: none;" >Editar</button>
+            
+            
+            
+                            </form>
+            
+                        </div>
+            
+            
+                    </div>
+                </div>
+
+    
+               
+            </form>
+
+
+
+
+
+
+
+        </div>
+
+
+
+    </section>
+    
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- cdn jQuery -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- logica -->
+    
+     <script src="main2.js" type="module"></script>
+    
+    <script src="main.js" type="module"></script>
+    
+    
+</body>
+</html>
